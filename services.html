@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    footer {
+        background-color: rgba(33, 37, 41, 1);
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 60px;
+    }
+
+    .clear {
+        clear: both;
+        height: 60px;
+    }
+
+    #navbar-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h3 {
+        color: #333;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+
+    .img-fluid {
+        max-height: 250px;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+
+    <div id="navbar-container">
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('navbar-container').innerHTML = data);
+        </script>
+    </div>
+    <div class="clear"></div>
+    <div class="container mt-5">
+
+        <h2 class="text-center mb-4">Our Services</h2>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3>Traffic Management Planning</h3>
+                <p>We provide expert traffic control planning solutions to ensure smooth and safe road operations. Our
+                    plans are designed to
+                    optimize vehicle movement while prioritizing pedestrian safety and regulatory compliance.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/advance-warning.png" alt="Traffic Management Planning"
+                    class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Road Safety Assessments</h3>
+                <p>Our team conducts detailed road safety audits and assessments, identifying potential hazards and
+                    recommending measures
+                    to improve road conditions, minimize accidents, and enhance public safety.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/bike-lane.png" alt="Road Safety Assessments" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3>Construction Traffic Control</h3>
+                <p>We specialize in traffic management for construction sites, ensuring smooth vehicle and pedestrian
+                    flow while keeping
+                    work areas safe. Our services include setting up barriers, detour planning, and flagging operations.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/flashing.png" alt="Construction Traffic Control" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Emergency Traffic Solutions</h3>
+                <p>We offer quick-response traffic solutions for emergencies such as road closures, accident management,
+                    and event
+                    coordination, ensuring minimal disruptions and enhanced road safety.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/bike-lane.png" alt="Emergency Traffic Solutions" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+    <div id="footer-placeholder">
+        <script>
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        </script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
